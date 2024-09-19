@@ -1,70 +1,72 @@
+# **Next.js AI Chatbot**
+
 <a href="https://chat.vercel.ai/">
   <img alt="Next.js 14 and App Router-ready AI chatbot." src="https://chat.vercel.ai/opengraph-image.png">
   <h1 align="center">Next.js AI Chatbot</h1>
 </a>
 
 <p align="center">
-  An open-source AI chatbot app template built with Next.js, the Vercel AI SDK, OpenAI, and Vercel KV.
+  Eine Open-Source AI-Chatbot-App-Vorlage, erstellt mit Next.js, dem Vercel AI SDK, OpenAI und Vercel KV.
 </p>
 
 <p align="center">
-  <a href="#features"><strong>Features</strong></a> ·
-  <a href="#model-providers"><strong>Model Providers</strong></a> ·
-  <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
-  <a href="#running-locally"><strong>Running locally</strong></a> ·
-  <a href="#authors"><strong>Authors</strong></a>
+  <a href="#features"><strong>Funktionen</strong></a> ·
+  <a href="#model-providers"><strong>Modell-Anbieter</strong></a> ·
+  <a href="#deploy-your-own"><strong>Deine eigene Instanz bereitstellen</strong></a> ·
+  <a href="#running-locally"><strong>Lokal ausführen</strong></a> ·
+  <a href="#authors"><strong>Autoren</strong></a>
 </p>
 <br/>
 
-## Features
+## Funktionen
 
 - [Next.js](https://nextjs.org) App Router
-- React Server Components (RSCs), Suspense, and Server Actions
-- [Vercel AI SDK](https://sdk.vercel.ai/docs) for streaming chat UI
-- Support for OpenAI (default), Anthropic, Cohere, Hugging Face, or custom AI chat models and/or LangChain
+- React Server Components (RSCs), Suspense und Server Actions
+- [Vercel AI SDK](https://sdk.vercel.ai/docs) für eine Streaming-Chat-Benutzeroberfläche
+- Unterstützung für OpenAI (Standard), Anthropic, Cohere, Hugging Face oder benutzerdefinierte AI-Chat-Modelle und/oder LangChain
 - [shadcn/ui](https://ui.shadcn.com)
-  - Styling with [Tailwind CSS](https://tailwindcss.com)
-  - [Radix UI](https://radix-ui.com) for headless component primitives
-  - Icons from [Phosphor Icons](https://phosphoricons.com)
-- Chat History, rate limiting, and session storage with [Vercel KV](https://vercel.com/storage/kv)
-- [NextAuth.js](https://github.com/nextauthjs/next-auth) for authentication
+  - Stilierung mit [Tailwind CSS](https://tailwindcss.com)
+  - [Radix UI](https://radix-ui.com) für headless Komponentenelemente
+  - Icons von [Phosphor Icons](https://phosphoricons.com)
+- Chatverlauf, Rate-Limiting und Sitzungs-Speicherung mit [Vercel KV](https://vercel.com/storage/kv)
+- [NextAuth.js](https://github.com/nextauthjs/next-auth) zur Authentifizierung
 
-## Model Providers
+## Modell-Anbieter
 
-This template ships with OpenAI `gpt-3.5-turbo` as the default. However, thanks to the [Vercel AI SDK](https://sdk.vercel.ai/docs), you can switch LLM providers to [Anthropic](https://anthropic.com), [Cohere](https://cohere.com/), [Hugging Face](https://huggingface.co), or using [LangChain](https://js.langchain.com) with just a few lines of code.
+Diese Vorlage wird standardmäßig mit OpenAI `gpt-3.5-turbo` ausgeliefert. Dank des [Vercel AI SDK](https://sdk.vercel.ai/docs) kannst du jedoch die LLM-Anbieter zu [Anthropic](https://anthropic.com), [Cohere](https://cohere.com/), [Hugging Face](https://huggingface.co) oder [LangChain](https://js.langchain.com) mit nur wenigen Codezeilen ändern.
 
-## Deploy Your Own
+## Deine eigene Instanz bereitstellen
 
-You can deploy your own version of the Next.js AI Chatbot to Vercel with one click:
+Du kannst deine eigene Version des Next.js AI-Chatbots mit einem Klick auf Vercel bereitstellen:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-title=Next.js+Chat&demo-description=A+full-featured%2C+hackable+Next.js+AI+chatbot+built+by+Vercel+Labs&demo-url=https%3A%2F%2Fchat.vercel.ai%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F4aVPvWuTmBvzM5cEdRdqeW%2F4234f9baf160f68ffb385a43c3527645%2FCleanShot_2023-06-16_at_17.09.21.png&project-name=Next.js+Chat&repository-name=nextjs-chat&repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-chatbot&from=templates&skippable-integrations=1&env=OPENAI_API_KEY%2CAUTH_SECRET&envDescription=How+to+get+these+env+vars&envLink=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-chatbot%2Fblob%2Fmain%2F.env.example&teamCreateStatus=hidden&stores=[{"type":"kv"}])
 
-## Creating a KV Database Instance
+## Erstellen einer KV-Datenbankinstanz
 
-Follow the steps outlined in the [quick start guide](https://vercel.com/docs/storage/vercel-kv/quickstart#create-a-kv-database) provided by Vercel. This guide will assist you in creating and configuring your KV database instance on Vercel, enabling your application to interact with it.
+Folge den Schritten im [Schnellstart-Leitfaden](https://vercel.com/docs/storage/vercel-kv/quickstart#create-a-kv-database) von Vercel, um eine KV-Datenbank auf Vercel zu erstellen und zu konfigurieren, damit deine Anwendung damit interagieren kann.
 
-Remember to update your environment variables (`KV_URL`, `KV_REST_API_URL`, `KV_REST_API_TOKEN`, `KV_REST_API_READ_ONLY_TOKEN`) in the `.env` file with the appropriate credentials provided during the KV database setup.
+Vergiss nicht, deine Umgebungsvariablen (`KV_URL`, `KV_REST_API_URL`, `KV_REST_API_TOKEN`, `KV_REST_API_READ_ONLY_TOKEN`) in der `.env`-Datei mit den entsprechenden Anmeldedaten zu aktualisieren, die während des Setups der KV-Datenbank bereitgestellt wurden.
 
-## Running locally
+## Lokal ausführen
 
-You will need to use the environment variables [defined in `.env.example`](.env.example) to run Next.js AI Chatbot. It's recommended you use [Vercel Environment Variables](https://vercel.com/docs/projects/environment-variables) for this, but a `.env` file is all that is necessary.
+Um den Next.js AI-Chatbot lokal auszuführen, benötigst du die Umgebungsvariablen, die in der [`.env.example`](.env.example)-Datei definiert sind. Es wird empfohlen, [Vercel Environment Variables](https://vercel.com/docs/projects/environment-variables) zu verwenden, aber eine `.env`-Datei reicht ebenfalls aus.
 
-> Note: You should not commit your `.env` file or it will expose secrets that will allow others to control access to your various OpenAI and authentication provider accounts.
+> Hinweis: Du solltest deine `.env`-Datei nicht committen, da dies Geheimnisse enthält, die es anderen ermöglichen würden, auf deine OpenAI- und Authentifizierungsanbieter-Konten zuzugreifen.
 
-1. Install Vercel CLI: `npm i -g vercel`
-2. Link local instance with Vercel and GitHub accounts (creates `.vercel` directory): `vercel link`
-3. Download your environment variables: `vercel env pull`
+1. Vercel CLI installieren: `npm i -g vercel`
+2. Lokale Instanz mit Vercel- und GitHub-Konten verknüpfen (erstellt ein `.vercel`-Verzeichnis): `vercel link`
+3. Lade deine Umgebungsvariablen herunter: `vercel env pull`
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-Your app template should now be running on [localhost:3000](http://localhost:3000/).
+Deine App-Vorlage sollte jetzt unter [localhost:3000](http://localhost:3000/) laufen.
 
-## Authors
+## Autoren
 
-This library is created by [Vercel](https://vercel.com) and [Next.js](https://nextjs.org) team members, with contributions from:
+Diese Bibliothek wurde von [Vercel](https://vercel.com) und Mitgliedern des [Next.js](https://nextjs.org) Teams erstellt, mit Beiträgen von:
 
 - Jared Palmer ([@jaredpalmer](https://twitter.com/jaredpalmer)) - [Vercel](https://vercel.com)
 - Shu Ding ([@shuding\_](https://twitter.com/shuding_)) - [Vercel](https://vercel.com)
